@@ -1,4 +1,5 @@
-const input = prompt('inserisci una parola');
+const input = prompt('inserisci una parola').toLocaleLowerCase();
+
 const lunghezza=input.length;
 
 function palindroma(str){
@@ -7,7 +8,16 @@ function palindroma(str){
        console.log(`questo è il contatore 2: ${contatore2}`);
        console.log(input.charAt(contatore1));
        console.log(input.charAt(contatore2));
+          
+        if(input.charAt(contatore1) !== input.charAt(contatore2)){
+            console.log('false')
+            alert('non è Palindromo');
+            return 'non è palindromo';
+        }
        }
+         console.log('true')
+            alert('è Palindromo');
+            return 'è Palindromo';
  }
 
  palindroma(input)
